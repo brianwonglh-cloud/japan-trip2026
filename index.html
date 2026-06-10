@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Itinerary: Jun 13 - Jun 23</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #e0e0e0;
+            
+            /* Category Colors based on source images */
+            --cat-eat: #e8daef;
+            --cat-sightseeing: #d4efdf;
+            --cat-museum: #d6eaf8;
+            --cat-culture: #f9e79f;
+            --cat-themepark: #f8c471;
+            --cat-park: #d5f5e3;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .day-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .day-header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .day-date {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .time-slot-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .time-slot-table th, .time-slot-table td {
+            padding: 12px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .time-slot-table th {
+            background-color: #f2f4f4;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .time-slot-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .col-time { width: 15%; font-weight: 600; color: var(--text-main); }
+        .col-activities { width: 45%; }
+        .col-location { width: 25%; }
+        .col-hours { width: 15%; font-size: 0.9rem; color: var(--text-muted); }
+
+        .time-period {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .activity-item {
+            margin-bottom: 8px;
+        }
+
+        .activity-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-left: 6px;
+            text-transform: uppercase;
+        }
+
+        .badge-eat { background-color: var(--cat-eat); color: #6c3483; }
+        .badge-sightseeing { background-color: var(--cat-sightseeing); color: #1e8449; }
+        .badge-museum { background-color: var(--cat-museum); color: #21618c; }
+        .badge-culture { background-color: var(--cat-culture); color: #7d6608; }
+        .badge-themepark { background-color: var(--cat-themepark); color: #ba4a00; }
+        .badge-park { background-color: var(--cat-park); color: #145a32; }
+        
+        .badge-booked {
+            background-color: #fadbd8;
+            color: #78281f;
+            border: 1px dashed #ec7063;
+        }
+
+        .map-link {
+            color: #2980b9;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .map-link:hover {
+            text-decoration: underline;
+        }
+
+        .meta-note {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        .special-event {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .time-slot-table, .time-slot-table tbody, .time-slot-table tr, .time-slot-table td, .time-slot-table th {
+                display: block;
+                width: 100%;
+            }
+            .time-slot-table tr {
+                border-bottom: 2px solid var(--border-color);
+                padding: 10px 0;
+            }
+            .time-slot-table td {
+                padding: 6px 20px;
+                border: none;
+            }
+            .col-time { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Japan Itinerary</h1>
+        <p class="subtitle">Jun 13 - Jun 23</p>
+    </header>
+
+    <!-- DAY 1 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 1</span>
+            <span class="day-date">13th June, Sat</span>
+        </div>
+        <table class="time-slot-table">
+            <thead>
+                <tr>
+                    <th class="col-time">Time</th>
+                    <th class="col-activities">Activities</th>
+                    <th class="col-location">Location Links</th>
+                    <th class="col-hours">Opening Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>4:10 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Arrive Narita JL712 (Mal 4.20pm JL0774)</div>
+                        <div class="activity-item">Travel to Hotel</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Hotel+Metropolitan+Tokyo+Ikebukuro" target="_blank">📍 Hotel Metropolitan Tokyo Ikebukuro</a>
+                        <div class="meta-note">1 Chome-6-1 Nishiikebukuro, Toshima Ward, Tokyo, 171-8505</div>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner Options:<span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">• Ichiran (10 mins walk)</div>
+                        <div class="activity-item">• Afuri (3 mins walk)</div>
+                        <div class="activity-item">• Mutekiya ramen (6 mins walk)</div>
+                        <div class="activity-item" style="margin-top:10px;">Stay over with Candice</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Ichiran+Ikebukuro" target="_blank">📍 Ichiran Ikebukuro</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Afuri+Ikebukuro" target="_blank">📍 Afuri Ikebukuro</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Mutekiya+Ikebukuro" target="_blank">📍 Mutekiya Ramen</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 2 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 2</span>
+            <span class="day-date">14th June, Sun</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span>4:55 am<br>9:00 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dad and Lily Arrival</div>
+                        <div class="activity-item">Odawara Castle <span class="badge badge-museum">Museum</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Odawara+Castle" target="_blank">📍 Odawara Castle</a>
+                    </td>
+                    <td class="col-hours">9:00am - 5:00pm</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>12:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Lunch @ Kanezashi <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked</span></div>
+                        <div class="activity-item">Odawara Castle Ninja Centre <span class="badge badge-museum">Museum</span></div>
+                        <div class="activity-item">(Optional) Odawara Fish Market & Totoco</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Kanezashi+Odawara" target="_blank">📍 Kanezashi</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Odawara+Castle+Ninja+Museum" target="_blank">📍 Ninja Centre</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Odawara+Fish+Market" target="_blank">📍 Odawara Fish Market</a>
+                    </td>
+                    <td class="col-hours">9:00am - 5:00pm<br><span class="meta-note">(Ninja Centre)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span>6:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner with Dad and Lily @ Ushigoro <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Ushigoro+Ikebukuro" target="_blank">📍 Ushigoro Ikebukuro</a>
+                        <div class="meta-note">ASLINE Ikebukuro 1-2F, 1-23-3 Higashi Ikebukuro, Toshima-ku, Tokyo</div>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 3 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 3</span>
+            <span class="day-date">15th June, Mon</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Kawagoe (Little Edo) Day Trip <span class="badge badge-sightseeing">Sightseeing</span></div>
+                        <div class="activity-item" style="margin-top:10px;">Chopstick making <span class="badge badge-culture">Culture</span></div>
+                        <div class="meta-note">• Wood Works Kawagoe</div>
+                        <div class="meta-note">• Wander Kurazukuri St - Bell Tower, Miffy Store house kitchen and bakery, Hikawa Shrine, Candy Alley</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Kawagoe+Chopstick+Wood+Works" target="_blank">📍 Wood Works Kawagoe</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Kurazukuri+Zone+Kawagoe" target="_blank">📍 Kurazukuri Street</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Kawagoe+Hikawa+Shrine" target="_blank">📍 Hikawa Shrine</a><br>
+                        <a class="map-link" href="https://reserva.be/karakimokkou0143" target="_blank">🔗 Booking Link</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>12:30 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Lunch - Kawagoe known for Unagi <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked via Phone</span></div>
+                        <div class="activity-item">• Unagi Denbe</div>
+                        <div class="activity-item">• Sweet potato ice cream</div>
+                        <div class="activity-item">• Castle Honmaru Palace, Taisho-Roman Street</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Unagi+Denbe+Kawagoe" target="_blank">📍 Unagi Denbe</a>
+                        <div class="meta-note">Saitama, Kawagoe, Saiwaicho, 1-10</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Kawagoe+Castle+Honmaru+Goten" target="_blank">📍 Honmaru Palace</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span>6:30 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner - Emit Fishbar <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Emit+Fishbar+GINZA+SIX" target="_blank">📍 Emit Fishbar (GINZA SIX 6F)</a>
+                        <div class="meta-note">Tokyo, Chuo City, Ginza, 6 Chome-10-1 GINZA SIX 6階</div>
+                    </td>
+                    <td class="col-hours">11:00am - 3:30pm<br>5:00pm - 10:00pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 4 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 4</span>
+            <span class="day-date">16th June, Tue</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item special-event">Lily's Bday</div>
+                        <div class="activity-item">Latest 12pm Check out Hotel Metropolitan</div>
+                        <div class="activity-item">Train to Mt Fuji (Lake Kawaguchiko) <span class="badge badge-sightseeing">Sightseeing</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Lake+Kawaguchiko" target="_blank">📍 Lake Kawaguchiko</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>12:00 pm<br><br><br>3:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item"><strong>Mt Fuji</strong></div>
+                        <div class="activity-item">Lunch - SHUN Sushi <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked</span></div>
+                        <div class="meta-note">(for 5 omakase, ethan and edith to share)</div>
+                        <div class="activity-item" style="margin-top:15px;">Check in Saison Yutori</div>
+                        <div class="activity-item">Kawaguchiko Herb Festival @ Oishi Park <span class="badge badge-sightseeing">Sightseeing</span></div>
+                        <div class="meta-note">(3.7km, 8 mins cab or go lakeside and take bus - red line, every 15 mins)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=SHUN+Sushi+Tokyo" target="_blank">📍 SHUN Sushi (Tokyo)</a>
+                        <div class="meta-note">Tokyo, Toshima City, Higashiikebukuro, 1 Chome-40-3 B1</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Saison+Yutori+Kawaguchiko" target="_blank">📍 Saison Yutori</a>
+                        <div class="meta-note">Fujikawaguchiko-machi, Yamanashi</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Oishi+Park+Kawaguchiko" target="_blank">📍 Oishi Park</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner - Kosaku / Hoto Fudo (Hoto noodle) <span class="badge badge-eat">Eat</span></div>
+                        <div class="meta-note">(20 mins walk)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Kosaku+Kawaguchiko" target="_blank">📍 Hoto Kosaku</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Hoto+Fudo+Kawaguchiko" target="_blank">📍 Hoto Fudo</a>
+                        <div class="meta-note">Funatsu, 3753-1 1 F, Yamanashi</div>
+                    </td>
+                    <td class="col-hours">10:00am - 9:00pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 5 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 5</span>
+            <span class="day-date">17th June, Wed</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item"><strong>Mt Fuji</strong></div>
+                        <div class="activity-item">Explore Lake Kawaguchiko, Cycling? <span class="badge badge-sightseeing">Sightseeing</span></div>
+                        <div class="activity-item">Chureito Pagoda (Arakurayama Sengen Park)</div>
+                        <div class="meta-note">- go early before crowds and cloud</div>
+                        <div class="activity-item">Mt Fuji panoramic ropeway (10 mins bus)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank">📍 Chureito Pagoda</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Mt.+Fuji+Panoramic+Ropeway" target="_blank">📍 Mt Fuji Panoramic Ropeway</a>
+                    </td>
+                    <td class="col-hours">8:30am - 5:00pm<br><span class="meta-note">(Ropeway)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Lunch nearby <span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">Oshino Hakkai <span class="badge badge-sightseeing">Sightseeing</span></div>
+                        <div class="meta-note">(1 hours PT or 25 mins cab)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank">📍 Oshino Hakkai</a>
+                        <div class="meta-note">Shibokusa, Oshino, Yamanashi</div>
+                    </td>
+                    <td class="col-hours">9:00am - 5:00pm</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner Options: <span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">• Lawson (18 mins walk)</div>
+                        <div class="activity-item">• Kou Shu Ya (Gyukatsu) (10 mins bus)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Kou+Shu+Ya+Gyukatsu+Kawaguchiko" target="_blank">📍 Kou Shu Ya (Gyukatsu)</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 6 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 6</span>
+            <span class="day-date">18th June, Thu</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span>10:00 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item"><strong>Mt Fuji</strong></div>
+                        <div class="activity-item">Check out Saison Yutori</div>
+                        <div class="activity-item">Music Forest Museum (20 mins walk) <span class="badge badge-museum">Museum</span></div>
+                        <div class="activity-item">Lunch nearby <span class="badge badge-eat">Eat</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Kawaguchiko+Music+Forest+Museum" target="_blank">📍 Music Forest Museum</a>
+                        <div class="meta-note">3077-20 Kawaguchi, Fujikawaguchiko</div>
+                    </td>
+                    <td class="col-hours">10:00am - 5:30pm<br><span class="meta-note">(Closes on Wednesday)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>3:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Train to Tokyo</div>
+                        <div class="activity-item">Check in Keio Plaza Hotel Tokyo</div>
+                        <div class="activity-item">Happo-en Japanese Garden <span class="badge badge-sightseeing">Sightseeing</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Keio+Plaza+Hotel+Tokyo" target="_blank">📍 Keio Plaza Hotel Tokyo</a>
+                        <div class="meta-note">2 Chome-2-1 Nishi, Shinjuku Ward</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Happo-en+Garden" target="_blank">📍 Happo-en Japanese Garden</a>
+                        <div class="meta-note">1 Chome-1-1 Shirokanedai, Minato City</div>
+                    </td>
+                    <td class="col-hours">10:00am - 7:00pm<br><span class="meta-note">(Happo-en)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span>6:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Soba @ Sarashina Horii <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Booked</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Sarashina+Horii+Azabu+Juban" target="_blank">📍 Sarashina Horii</a>
+                        <div class="meta-note">3 Chome-11-4 Motoazabu, Minato City</div>
+                    </td>
+                    <td class="col-hours">5:00pm - 8:30pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 7 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 7</span>
+            <span class="day-date">19th June, Fri</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span>9:00 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Tsukiji Outer Market <span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">Walk & Snack through the market</div>
+                        <div class="activity-item">Unitora Nakadori - Uni bowl / Yakluo Ishikawa <span class="badge badge-booked">Book?</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Tsukiji+Outer+Market" target="_blank">📍 Tsukiji Outer Market</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Unitora+Nakadori+Tsukiji" target="_blank">📍 Unitora Nakadori</a>
+                    </td>
+                    <td class="col-hours">Approx 9am - 1pm<br><span class="meta-note">(Closes Sunday & partial Wed)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Tokyo Toy Museum <span class="badge badge-museum">Museum</span></div>
+                        <div class="activity-item" style="background-color: #fff9c4; padding: 4px; border-radius: 4px;">Malcolm to go Ginza - Uniqlo, DSM, Kindal, GU, Rag Tag</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Tokyo+Toy+Museum" target="_blank">📍 Tokyo Toy Museum</a>
+                        <div class="meta-note">4 Chome-20-20, Yotsuya, Shinjuku City</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Dover+Street+Market+Ginza" target="_blank">📍 Ginza Shopping (DSM)</a>
+                    </td>
+                    <td class="col-hours">10:00am - 4:00pm<br><span class="meta-note">(Museum Closes Thursday)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Dinner Options: <span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">• Godaime Hanayama Udon</div>
+                        <div class="activity-item">• Kaiten Sushi Ginza Onodera Honten</div>
+                        <div class="activity-item">• Ginza Bairin for Tonkatsu</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Godaime+Hanayama+Udon+Ginza" target="_blank">📍 Godaime Hanayama Udon</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Kaiten+Sushi+Ginza+Onodera" target="_blank">📍 Kaiten Sushi Ginza Onodera</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Ginza+Bairin+Tonkatsu" target="_blank">📍 Ginza Bairin</a>
+                        <div class="meta-note">3 Chome-14-13 Ginza, Chuo City</div>
+                    </td>
+                    <td class="col-hours">11:00am - 3:30pm<br>5:30pm - 9:30pm</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 8 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 8</span>
+            <span class="day-date">20th June, Sat</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Tonkatsu Maisen Ikebukuro / Gyukatsu Motomura Ikebukuro / Tempura Tsunahachi <span class="badge badge-eat">Eat</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Tonkatsu+Maisen+Ikebukuro" target="_blank">📍 Tonkatsu Maisen</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Gyukatsu+Motomura+Ikebukuro" target="_blank">📍 Gyukatsu Motomura</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>2:00 pm<br>3:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Yuri Family Meeting Lunch <span class="badge badge-eat">Eat</span></div>
+                        <div class="meta-note">• Shinjuku star tree</div>
+                        <div class="activity-item" style="margin-top:10px;">Setagaya Play Park <span class="badge badge-park">Park</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Shinjuku+star+tree" target="_blank">📍 Shinjuku Star Tree</a>
+                        <div class="meta-note">Shinjuku, 3 Chome-5-4</div><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Setagaya+Play+Park" target="_blank">📍 Setagaya Play Park</a>
+                        <div class="meta-note">1 Chome-5 Ikejiri, Setagaya City</div>
+                    </td>
+                    <td class="col-hours">10:00am - 6:00pm<br><span class="meta-note">(Park Closes on...)</span></td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span>1:00 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item special-event">Fathers' day dinner</div>
+                        <div class="activity-item">Shabushabu Onyasai Ikebukuro / Shabu-Shabu Shoutaian Yodobash <span class="badge badge-eat">Eat</span> <span class="badge badge-booked">Book?</span></div>
+                        <div class="activity-item" style="margin-top:10px;">Dad and Lily Departure</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Onyasai+Ikebukuro" target="_blank">📍 Shabushabu Onyasai</a><br>
+                        <a class="map-link" href="https://maps.google.com/?q=Shoutaian+Yodobashi+Shinjuku" target="_blank">📍 Shabu-Shabu Shoutaian</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 9 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 9</span>
+            <span class="day-date">21th June, Sun</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span>9:00 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item special-event">Edith's Bday</div>
+                        <div class="activity-item">Sanrio Puroland <span class="badge badge-themepark">Theme Park</span></div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Sanrio+Puroland" target="_blank">📍 Sanrio Puroland</a>
+                        <div class="meta-note">1 Chome-31 Ochiai, Tama</div>
+                    </td>
+                    <td class="col-hours">8:30am - 6:00pm</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span>12:00 pm<br><br>5:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Lunch at Sanrio <span class="badge badge-eat">Eat</span></div>
+                        <div class="activity-item">Buy cake for Edith</div>
+                        <div class="activity-item">Dinner - sushi train <span class="badge badge-eat">Eat</span></div>
+                    </td>
+                    <td class="col-location">-</td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span>6:00 pm</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Onsen - Gokuraku-yu Tama Center <span class="badge badge-culture">Culture</span></div>
+                        <div class="activity-item">Send candice back and stay over (TBC)</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Gokurakuyu+Tama+Center" target="_blank">📍 Gokuraku-yu Tama Center</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- DAY 10 -->
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-title">Day 10</span>
+            <span class="day-date">22nd June, Mon</span>
+        </div>
+        <table class="time-slot-table">
+            <tbody>
+                <tr>
+                    <td class="col-time"><span class="time-period">Morning</span>11:40 am<br>10:30 am</td>
+                    <td class="col-activities">
+                        <div class="activity-item">Candice Departure</div>
+                        <div class="activity-item">Visit Yuri's Grandparents (2 hours train)</div>
+                    </td>
+                    <td class="col-location">Take Bus</td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Afternoon</span></td>
+                    <td class="col-activities">-</td>
+                    <td class="col-location">-</td>
+                    <td class="col-hours">-</td>
+                </tr>
+                <tr>
+                    <td class="col-time"><span class="time-period">Evening</span></td>
+                    <td class="col-activities">
+                        <div class="activity-item">Omoide Yokocho?</div>
+                    </td>
+                    <td class="col-location">
+                        <a class="map-link" href="https://maps.google.com/?q=Omoide+Yokocho" target="_blank">📍 Omoide Yokocho</a>
+                    </td>
+                    <td class="col-hours">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+</body>
+</html>
